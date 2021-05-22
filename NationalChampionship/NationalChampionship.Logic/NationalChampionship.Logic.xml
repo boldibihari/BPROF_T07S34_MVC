@@ -1,0 +1,624 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NationalChampionship.Logic</name>
+    </assembly>
+    <members>
+        <member name="T:NationalChampionship.Logic.Classes.AdministratorLogic">
+            <summary>
+            AdministratorLogic with all administration methods.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.AdministratorLogic.#ctor(NationalChampionship.Repository.Interfaces.IClubRepository,NationalChampionship.Repository.Interfaces.IManagerRepository,NationalChampionship.Repository.Interfaces.IPlayerRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NationalChampionship.Logic.Classes.AdministratorLogic"/> class.
+            AdministratorLogic constructor.
+            </summary>
+            <param name="clubRepository">ClubRepository class implementation.</param>
+            <param name="managerRepository">ManagerRepository class implementation.</param>
+            <param name="playerRepository">PlayerRepository class implementation.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.AdministratorLogic.AddClub(NationalChampionship.Data.Models.Club)">
+            <summary>
+            AddClub method.
+            </summary>
+            <param name="club">Club to add.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.AdministratorLogic.AddManager(NationalChampionship.Data.Models.Manager)">
+            <summary>
+            AddManager method.
+            </summary>
+            <param name="manager">Manager to add.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.AdministratorLogic.AddManagerToClub(NationalChampionship.Data.Models.Manager,System.Int32)">
+            <summary>
+            AddManagerToClub method.
+            </summary>
+            <param name="manager">Manager to add.</param>
+            <param name="clubid">ClubId where we want to add.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.AdministratorLogic.AddPlayer(NationalChampionship.Data.Models.Player)">
+            <summary>
+            AddPlayer method.
+            </summary>
+            <param name="player">Player to add.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.AdministratorLogic.AddPlayerToClub(NationalChampionship.Data.Models.Player,System.Int32)">
+            <summary>
+            AddPlayerToClub method.
+            </summary>
+            <param name="player">Player to add.</param>
+            <param name="clubid">ClubId where we want to add.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.AdministratorLogic.DeleteClub(System.Int32)">
+            <summary>
+            DeleteClub method.
+            </summary>
+            <param name="clubid">Club to delete.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.AdministratorLogic.DeleteManager(System.Int32)">
+            <summary>
+            DeleteManager method.
+            </summary>
+            <param name="managerid">Manager to delete.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.AdministratorLogic.DeletePlayer(System.Int32)">
+            <summary>
+            DeletePlayer method.
+            </summary>
+            <param name="playerid">Player to delete.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.AdministratorLogic.UpdateClub(System.Int32,NationalChampionship.Data.Models.Club)">
+            <summary>
+            UpdateClub method.
+            </summary>
+            <param name="idClub">ClubId that we want to update.</param>
+            <param name="newClub">The updated club.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.AdministratorLogic.UpdateManager(System.Int32,NationalChampionship.Data.Models.Manager)">
+            <summary>
+            UpdateManager method.
+            </summary>
+            <param name="idManager">ManagerId that we want to update.</param>
+            <param name="newManager">The updated manager.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.AdministratorLogic.UpdatePlayer(System.Int32,NationalChampionship.Data.Models.Player)">
+            <summary>
+            UpdatePlayer method.
+            </summary>
+            <param name="idPlayer">PlayerId that we want to update.</param>
+            <param name="newPlayer">The updated player.</param>
+        </member>
+        <member name="T:NationalChampionship.Logic.Classes.Nationality">
+            <summary>
+            Nationality Logic classes.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Logic.Classes.Nationality.PlayerNationality">
+            <summary>
+            PlayerNationality property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Logic.Classes.Nationality.Count">
+            <summary>
+            Count property.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.Nationality.ToString">
+            <summary>
+            ToString method.
+            </summary>
+            <returns>
+            Properties separrated by a space.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.Nationality.Equals(System.Object)">
+            <summary>
+            Equals method.
+            </summary>
+            <param name="obj">Object to be compared.</param>
+            <returns>
+            True or false.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.Nationality.GetHashCode">
+            <summary>
+            GetHashCode method.
+            </summary>
+            <returns>
+            GetHashCode value.
+            </returns>
+        </member>
+        <member name="T:NationalChampionship.Logic.Classes.Position">
+            <summary>
+            Position Logic classes.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Logic.Classes.Position.PlayerPosition">
+            <summary>
+            PlayerPosition property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Logic.Classes.Position.Count">
+            <summary>
+            Count property.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.Position.ToString">
+            <summary>
+            ToString method.
+            </summary>
+            <returns>
+            Properties separrated by a space.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.Position.Equals(System.Object)">
+            <summary>
+            Equals method.
+            </summary>
+            <param name="obj">Object to be compared.</param>
+            <returns>
+            True or false.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.Position.GetHashCode">
+            <summary>
+            GetHashCode method.
+            </summary>
+            <returns>
+            GetHashCode value.
+            </returns>
+        </member>
+        <member name="T:NationalChampionship.Logic.Classes.UserLogic">
+            <summary>
+            UserLogic with all user methods.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.#ctor(NationalChampionship.Repository.Interfaces.IClubRepository,NationalChampionship.Repository.Interfaces.IManagerRepository,NationalChampionship.Repository.Interfaces.IPlayerRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NationalChampionship.Logic.Classes.UserLogic"/> class.
+            AdministratorLogic constructor.
+            </summary>
+            <param name="clubRepository">ClubRepository class implementation.</param>
+            <param name="managerRepository">ManagerRepository class implementation.</param>
+            <param name="playerRepository">PlayerRepository class implementation.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.GetOneClub(System.Int32)">
+            <summary>
+            GetOneClub method.
+            </summary>
+            <param name="idClub">Club to list.</param>
+            <returns>
+            One club.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.GetOneManager(System.Int32)">
+            <summary>
+            GetOneManager method.
+            </summary>
+            <param name="idManager">Manager to list.</param>
+            /// <returns>
+            One manager.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.GetOnePlayer(System.Int32)">
+            <summary>
+            GetOnePlayer method.
+            </summary>
+            <param name="idPlayer">Player to list.</param>
+            /// <returns>
+            One player.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.GetAllClub">
+            <summary>
+            GetAllClub method.
+            </summary>
+            <returns>
+            All club.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.GetAllManager">
+            <summary>
+            GetAllManager method.
+            </summary>
+            <returns>
+            All manager.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.GetAllPlayer">
+            <summary>
+            GetAllPlayer method.
+            </summary>
+            <returns>
+            All player.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.GetAllCaptain">
+            <summary>
+            GetAllCaptain method.
+            </summary>
+            <returns>
+            All captain.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.ClubAverageAge(System.Int32)">
+            <summary>
+            ClubAverageAge method.
+            </summary>
+            <param name="idClub">ClubId that we want to list.</param>
+            <returns>
+            One average club player age.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.AllAverageAge">
+            <summary>
+            AllAverageAge method.
+            </summary>
+            <returns>
+            One average age.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.ClubValue(System.Int32)">
+            <summary>
+            ClubValue method.
+            </summary>
+            <param name="idClub">ClubId that we want to list.</param>
+            <returns>
+            One club value.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.AllValue">
+            <summary>
+            AllValue method.
+            </summary>
+            <returns>
+            Total value.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.AverageClubValue">
+            <summary>
+            AverageClubValue method.
+            </summary>
+            <returns>
+            One average club value.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.AverageClubValueAsync">
+            <summary>
+            AverageClubValueAsync method.
+            </summary>
+            <returns>
+            One average club value.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.ClubAveragePlayerValue(System.Int32)">
+            <summary>
+            ClubAveragePlayerValue method.
+            </summary>
+            <param name="idClub">ClubId that we want to list.</param>
+            <returns>
+            One average club player value.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.AveragePlayerValue">
+            <summary>
+            AveragePlayerValue method.
+            </summary>
+            <returns>
+            One average player value.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.GetNationalityOneClub(System.Int32)">
+            <summary>
+            GetNationalityOneClub method.
+            </summary>
+            <param name="idClub">ClubId that we want to list.</param>
+            <returns>
+            Grouped by nationality and count.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.GetNationalityOneClubAsync(System.Int32)">
+            <summary>
+            GetNationalityOneClubAsync method.
+            </summary>
+            <param name="idClub">ClubId that we want to list.</param>
+            <returns>
+            Grouped by nationality and count.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.GetAllNationality">
+            <summary>
+            GetAllNationality method.
+            </summary>
+            <returns>
+            Grouped by nationality and count.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.GetPositionOneClub(System.Int32)">
+            <summary>
+            GetPositionOneClub method.
+            </summary>
+            <param name="idClub">ClubId that we want to list.</param>
+            <returns>
+            Grouped by position and count.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.GetPositionOneClubAsync(System.Int32)">
+            <summary>
+            GetPositionOneClubAsync method.
+            </summary>
+            <param name="idClub">ClubId that we want to list.</param>
+            <returns>
+            Grouped by position and count.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Classes.UserLogic.GetAllPosition">
+            <summary>
+            GetAllPosition method.
+            </summary>
+            <returns>
+            Grouped by position and count.
+            </returns>
+        </member>
+        <member name="T:NationalChampionship.Logic.Interfaces.IAdministratorLogic">
+            <summary>
+            IAdministratorLogic interface with all administration methods.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IAdministratorLogic.AddClub(NationalChampionship.Data.Models.Club)">
+            <summary>
+            AddClub method.
+            </summary>
+            <param name="club">Club to add.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IAdministratorLogic.AddManager(NationalChampionship.Data.Models.Manager)">
+            <summary>
+            AddManager method.
+            </summary>
+            <param name="manager">Manager to add.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IAdministratorLogic.AddPlayer(NationalChampionship.Data.Models.Player)">
+            <summary>
+            AddPlayer method.
+            </summary>
+            <param name="player">Player to add.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IAdministratorLogic.DeleteClub(System.Int32)">
+            <summary>
+            DeleteClub method.
+            </summary>
+            <param name="clubid">Club id to delete.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IAdministratorLogic.DeleteManager(System.Int32)">
+            <summary>
+            DeleteManager method.
+            </summary>
+            <param name="managerid">Manager id to delete.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IAdministratorLogic.DeletePlayer(System.Int32)">
+            <summary>
+            DeletePlayer method.
+            </summary>
+            <param name="playerid">Player to delete.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IAdministratorLogic.UpdateClub(System.Int32,NationalChampionship.Data.Models.Club)">
+            <summary>
+            UpdateClub method.
+            </summary>
+            <param name="idClub">ClubId that we want to update.</param>
+            <param name="newClub">The updated club.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IAdministratorLogic.UpdateManager(System.Int32,NationalChampionship.Data.Models.Manager)">
+            <summary>
+            UpdateManager method.
+            </summary>
+            <param name="idManager">ManagerId that we want to update.</param>
+            <param name="newManager">The updated manager.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IAdministratorLogic.UpdatePlayer(System.Int32,NationalChampionship.Data.Models.Player)">
+            <summary>
+            UpdatePlayer method.
+            </summary>
+            <param name="idPlayer">PlayerId that we want to update.</param>
+            <param name="newPlayer">The updated player.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IAdministratorLogic.AddPlayerToClub(NationalChampionship.Data.Models.Player,System.Int32)">
+            <summary>
+            AddPlayerToClub method.
+            </summary>
+            <param name="player">Player to add.</param>
+            <param name="clubid">ClubId where we want to add.</param>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IAdministratorLogic.AddManagerToClub(NationalChampionship.Data.Models.Manager,System.Int32)">
+            <summary>
+            AddManagerToClub method.
+            </summary>
+            <param name="manager">Manager to add.</param>
+            <param name="clubid">ClubId where we want to add.</param>
+        </member>
+        <member name="T:NationalChampionship.Logic.Interfaces.IUserLogic">
+            <summary>
+            IUserLogic interface with all user methods.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.GetOneClub(System.Int32)">
+            <summary>
+            GetOneClub method.
+            </summary>
+            <param name="idClub">Club to list.</param>
+            <returns>
+            One club.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.GetOneManager(System.Int32)">
+            <summary>
+            GetOneManager method.
+            </summary>
+            <param name="idManager">Manager to list.</param>
+            /// <returns>
+            One manager.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.GetOnePlayer(System.Int32)">
+            <summary>
+            GetOnePlayer method.
+            </summary>
+            <param name="idPlayer">Player to list.</param>
+            /// <returns>
+            One player.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.GetAllClub">
+            <summary>
+            GetAllClub method.
+            </summary>
+            <returns>
+            All club.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.GetAllManager">
+            <summary>
+            GetAllManager method.
+            </summary>
+            <returns>
+            All manager.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.GetAllPlayer">
+            <summary>
+            GetAllPlayer method.
+            </summary>
+            <returns>
+            All player.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.GetAllCaptain">
+            <summary>
+            GetAllCaptain method.
+            </summary>
+            <returns>
+            All captain.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.ClubAverageAge(System.Int32)">
+            <summary>
+            ClubAverageAge method.
+            </summary>
+            <param name="idClub">ClubId that we want to list.</param>
+            <returns>
+            One average club player age.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.AllAverageAge">
+            <summary>
+            AllAverageAge method.
+            </summary>
+            <returns>
+            One average age.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.ClubValue(System.Int32)">
+            <summary>
+            ClubValue method.
+            </summary>
+            <param name="idClub">ClubId that we want to list.</param>
+            <returns>
+            One club value.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.AllValue">
+            <summary>
+            AllValue method.
+            </summary>
+            <returns>
+            Total value.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.AverageClubValue">
+            <summary>
+            AverageClubValue method.
+            </summary>
+            <returns>
+            One average club value.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.AverageClubValueAsync">
+            <summary>
+            AverageClubValueAsync method.
+            </summary>
+            <returns>
+            One average club value.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.ClubAveragePlayerValue(System.Int32)">
+            <summary>
+            ClubAveragePlayerValue method.
+            </summary>
+            <param name="idClub">ClubId that we want to list.</param>
+            <returns>
+            One average club player value.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.AveragePlayerValue">
+            <summary>
+            AveragePlayerValue method.
+            </summary>
+            <returns>
+            One average player value.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.GetNationalityOneClub(System.Int32)">
+            <summary>
+            GetNationalityOneClub method.
+            </summary>
+            <param name="idClub">ClubId that we want to list.</param>
+            <returns>
+            Grouped by nationality and count.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.GetNationalityOneClubAsync(System.Int32)">
+            <summary>
+            GetNationalityOneClubAsync method.
+            </summary>
+            <param name="idClub">ClubId that we want to list.</param>
+            <returns>
+            Grouped by nationality and count.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.GetAllNationality">
+            <summary>
+            GetAllNationality method.
+            </summary>
+            <returns>
+            Grouped by nationality and count.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.GetPositionOneClub(System.Int32)">
+            <summary>
+            GetPositionOneClub method.
+            </summary>
+            <param name="idClub">ClubId that we want to list.</param>
+            <returns>
+            Grouped by position and count.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.GetPositionOneClubAsync(System.Int32)">
+            <summary>
+            GetPositionOneClubAsync method.
+            </summary>
+            <param name="idClub">ClubId that we want to list.</param>
+            <returns>
+            Grouped by position and count.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Logic.Interfaces.IUserLogic.GetAllPosition">
+            <summary>
+            GetAllPosition method.
+            </summary>
+            <returns>
+            Grouped by position and count.
+            </returns>
+        </member>
+    </members>
+</doc>

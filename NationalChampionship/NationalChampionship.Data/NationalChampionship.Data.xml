@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NationalChampionship.Data</name>
+    </assembly>
+    <members>
+        <member name="T:NationalChampionship.Data.Models.Club">
+            <summary>
+            Club class.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Club.ClubId">
+            <summary>
+            ClubId property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Club.ClubName">
+            <summary>
+            ClubName property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Club.ClubColour">
+            <summary>
+            ClubColour property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Club.ClubCity">
+            <summary>
+            ClubCity property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Club.ClubFounded">
+            <summary>
+            ClubFounded property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Club.Stadium">
+            <summary>
+            Stadium property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Club.Manager">
+            <summary>
+            Manager NotMapped navigation property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Club.Players">
+            <summary>
+            Players NotMapped navigation property.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Data.Models.Club.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NationalChampionship.Data.Models.Club"/> class.
+            Club constructor.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Data.Models.Club.ToString">
+            <summary>
+            ToString method.
+            </summary>
+            <returns>
+            Properties separrated by a space.
+            </returns>
+        </member>
+        <member name="T:NationalChampionship.Data.Models.Manager">
+            <summary>
+            Manager class.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Manager.ManagerId">
+            <summary>
+            ManagerId property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Manager.ManagerName">
+            <summary>
+            ManagerName property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Manager.ManagerNationality">
+            <summary>
+            ManagerNationality property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Manager.ManagerBirthDate">
+            <summary>
+            ManagerBirthDate property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Manager.ManagerStartYear">
+            <summary>
+            ManagerStartYear property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Manager.WonChampionship">
+            <summary>
+            WonChampionship property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Manager.ClubId">
+            <summary>
+            ClubId ForeignKey property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Manager.Club">
+            <summary>
+            Club NotMapped navigation property.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Data.Models.Manager.ToString">
+            <summary>
+            ToString method.
+            </summary>
+            <returns>
+            Properties separrated by a space.
+            </returns>
+        </member>
+        <member name="T:NationalChampionship.Data.Models.NationalChampionshipDbContext">
+            <summary>
+            NationalChampionshipDbContext class.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.NationalChampionshipDbContext.Clubs">
+            <summary>
+            Clubs table.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.NationalChampionshipDbContext.Managers">
+            <summary>
+            Managers table.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.NationalChampionshipDbContext.Players">
+            <summary>
+            Players table.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Data.Models.NationalChampionshipDbContext.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NationalChampionship.Data.Models.NationalChampionshipDbContext"/> class.
+            NationalChampionshipDbContext constructor.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Data.Models.NationalChampionshipDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{NationalChampionship.Data.Models.NationalChampionshipDbContext})">
+            <summary>
+            Initializes a new instance of the <see cref="T:NationalChampionship.Data.Models.NationalChampionshipDbContext"/> class.
+            NationalChampionshipDbContext base constructor.
+            </summary>
+            <param name="opt">DbContextOptions implementation.</param>
+        </member>
+        <member name="M:NationalChampionship.Data.Models.NationalChampionshipDbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            OnConfiguring.
+            </summary>
+            <param name="optionsBuilder">DbContextOptionsBuilder implementation.</param>
+        </member>
+        <member name="M:NationalChampionship.Data.Models.NationalChampionshipDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            OnModelCreating entity connection and dates.
+            </summary>
+            <param name="modelBuilder">ModelBuilder implementation.</param>
+        </member>
+        <member name="T:NationalChampionship.Data.Models.PlayerPosition">
+            <summary>
+            PlayerPosition enum.
+            </summary>
+        </member>
+        <member name="F:NationalChampionship.Data.Models.PlayerPosition.Goalkeeper">
+            <summary>
+            Goalkeeper position.
+            </summary>
+        </member>
+        <member name="F:NationalChampionship.Data.Models.PlayerPosition.Defender">
+            <summary>
+            Defender position.
+            </summary>
+        </member>
+        <member name="F:NationalChampionship.Data.Models.PlayerPosition.Midfielder">
+            <summary>
+            Midfielder postition.
+            </summary>
+        </member>
+        <member name="F:NationalChampionship.Data.Models.PlayerPosition.Forward">
+            <summary>
+            Forward position.
+            </summary>
+        </member>
+        <member name="T:NationalChampionship.Data.Models.Player">
+            <summary>
+            Player class.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Player.PlayerId">
+            <summary>
+            PlayerId property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Player.PlayerName">
+            <summary>
+            PlayerName property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Player.PlayerNationality">
+            <summary>
+            PlayerNationality property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Player.PlayerBirthDate">
+            <summary>
+            PlayerBirthDate property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Player.PlayerPosition">
+            <summary>
+            PlayerPosition property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Player.PlayerValue">
+            <summary>
+            PlayerValue property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Player.ClubId">
+            <summary>
+            ClubId ForeignKey property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Data.Models.Player.Club">
+            <summary>
+            Club NotMapped navigation property.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Data.Models.Player.ToString">
+            <summary>
+            ToString method.
+            </summary>
+            <returns>
+            Properties separrated by a space.
+            </returns>
+        </member>
+    </members>
+</doc>

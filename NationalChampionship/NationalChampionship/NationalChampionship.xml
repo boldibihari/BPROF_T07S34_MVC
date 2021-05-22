@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NationalChampionship</name>
+    </assembly>
+    <members>
+        <member name="T:NationalChampionship.AdministratorMenuMethod">
+            <summary>
+            AdministratorMenuMethod static class.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.AdministratorMenuMethod.AddClub(NationalChampionship.Logic.Classes.AdministratorLogic)">
+            <summary>
+            AddClub method.
+            </summary>
+            <param name="administratorLogic">AdministratorLogic parameter.</param>
+        </member>
+        <member name="M:NationalChampionship.AdministratorMenuMethod.AddManager(NationalChampionship.Logic.Classes.AdministratorLogic,NationalChampionship.Logic.Classes.UserLogic)">
+            <summary>
+            AddManager method.
+            </summary>
+            <param name="administratorLogic">AdministratorLogic parameter.</param>
+            <param name="userLogic">UserLogic parameter.</param>
+        </member>
+        <member name="M:NationalChampionship.AdministratorMenuMethod.AddPlayer(NationalChampionship.Logic.Classes.AdministratorLogic,NationalChampionship.Logic.Classes.UserLogic)">
+            <summary>
+            AddPlayer method.
+            </summary>
+            <param name="administratorLogic">AdministratorLogic parameter.</param>
+            <param name="userLogic">UserLogic parameter.</param>
+        </member>
+        <member name="M:NationalChampionship.AdministratorMenuMethod.DeleteClub(NationalChampionship.Logic.Classes.AdministratorLogic,NationalChampionship.Logic.Classes.UserLogic)">
+            <summary>
+            DeleteClub method.
+            </summary>
+            <param name="administratorLogic">AdministratorLogic parameter.</param>
+            <param name="userLogic">UserLogic parameter.</param>
+        </member>
+        <member name="M:NationalChampionship.AdministratorMenuMethod.DeleteManager(NationalChampionship.Logic.Classes.AdministratorLogic,NationalChampionship.Logic.Classes.UserLogic)">
+            <summary>
+            DeleteManager method.
+            </summary>
+            <param name="administratorLogic">AdministratorLogic parameter.</param>
+            <param name="userLogic">UserLogic parameter.</param>
+        </member>
+        <member name="M:NationalChampionship.AdministratorMenuMethod.DeletePlayer(NationalChampionship.Logic.Classes.AdministratorLogic,NationalChampionship.Logic.Classes.UserLogic)">
+            <summary>
+            DeletePlayer method.
+            </summary>
+            <param name="administratorLogic">AdministratorLogic parameter.</param>
+            <param name="userLogic">UserLogic parameter.</param>
+        </member>
+        <member name="M:NationalChampionship.AdministratorMenuMethod.UpdateClub(NationalChampionship.Logic.Classes.AdministratorLogic,NationalChampionship.Logic.Classes.UserLogic)">
+            <summary>
+            UpdateClub method.
+            </summary>
+            <param name="administratorLogic">AdministratorLogic parameter.</param>
+            <param name="userLogic">UserLogic parameter.</param>
+        </member>
+        <member name="M:NationalChampionship.AdministratorMenuMethod.UpdateManager(NationalChampionship.Logic.Classes.AdministratorLogic,NationalChampionship.Logic.Classes.UserLogic)">
+            <summary>
+            UpdateManager method.
+            </summary>
+            <param name="administratorLogic">AdministratorLogic parameter.</param>
+            <param name="userLogic">UserLogic parameter.</param>
+        </member>
+        <member name="M:NationalChampionship.AdministratorMenuMethod.UpdatePlayer(NationalChampionship.Logic.Classes.AdministratorLogic,NationalChampionship.Logic.Classes.UserLogic)">
+            <summary>
+            UpdatePlayer method.
+            </summary>
+            <param name="administratorLogic">AdministratorLogic parameter.</param>
+            <param name="userLogic">UserLogic parameter.</param>
+        </member>
+        <member name="T:NationalChampionship.Factory">
+            <summary>
+            Factory class.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Factory.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NationalChampionship.Factory"/> class.
+            Factory constructor.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Factory.AdministratorLogic">
+            <summary>
+            AdministratorLogic property.
+            </summary>
+        </member>
+        <member name="P:NationalChampionship.Factory.UserLogic">
+            <summary>
+            UserLogic property.
+            </summary>
+        </member>
+        <member name="T:NationalChampionship.Program">
+            <summary>
+            Program class.
+            </summary>
+        </member>
+        <member name="T:NationalChampionship.UserMenuMethod">
+            <summary>
+            UserMenuMethod static class.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.UserMenuMethod.GetAllClub(NationalChampionship.Logic.Classes.UserLogic)">
+            <summary>
+            GetAllClub method.
+            </summary>
+            <param name="userLogic">UserLogic parameter.</param>
+        </member>
+        <member name="M:NationalChampionship.UserMenuMethod.GetAllManager(NationalChampionship.Logic.Classes.UserLogic)">
+            <summary>
+            GetAllManager method.
+            </summary>
+            <param name="userLogic">UserLogic parameter.</param>
+        </member>
+        <member name="M:NationalChampionship.UserMenuMethod.GetAllPlayer(NationalChampionship.Logic.Classes.UserLogic)">
+            <summary>
+            GetAllPlayer method.
+            </summary>
+            <param name="userLogic">UserLogic parameter.</param>
+        </member>
+        <member name="M:NationalChampionship.UserMenuMethod.GetAllCaptain(NationalChampionship.Logic.Classes.UserLogic)">
+            <summary>
+            GetAllCaptain method.
+            </summary>
+            <param name="userLogic">UserLogic parameter.</param>
+        </member>
+        <member name="M:NationalChampionship.UserMenuMethod.GetOneClub(NationalChampionship.Logic.Classes.UserLogic)">
+            <summary>
+            GetOneClub method.
+            </summary>
+            <param name="userLogic">UserLogic parameter.</param>
+        </member>
+        <member name="M:NationalChampionship.UserMenuMethod.GetOneManager(NationalChampionship.Logic.Classes.UserLogic)">
+            <summary>
+            GetOneManager method.
+            </summary>
+            <param name="userLogic">UserLogic parameter.</param>
+        </member>
+        <member name="M:NationalChampionship.UserMenuMethod.GetOnePlayer(NationalChampionship.Logic.Classes.UserLogic)">
+            <summary>
+            GetOnePlayer method.
+            </summary>
+            <param name="userLogic">UserLogic parameter.</param>
+        </member>
+        <member name="M:NationalChampionship.UserMenuMethod.Statistics(NationalChampionship.Logic.Classes.UserLogic)">
+            <summary>
+            Statistics method.
+            </summary>
+            <param name="userLogic">UserLogic parameter.</param>
+        </member>
+        <member name="M:NationalChampionship.UserMenuMethod.AverageClubValueAsync(NationalChampionship.Logic.Classes.UserLogic)">
+            <summary>
+            AverageClubValueAsync method.
+            </summary>
+            <param name="userLogic">UserLogic parameter.</param>
+        </member>
+        <member name="M:NationalChampionship.UserMenuMethod.GetNationalityOneClubAsync(NationalChampionship.Logic.Classes.UserLogic)">
+            <summary>
+            GetNationalityOneClubAsync method.
+            </summary>
+            <param name="userLogic">UserLogic parameter.</param>
+        </member>
+        <member name="M:NationalChampionship.UserMenuMethod.GetPositionOneClubAsync(NationalChampionship.Logic.Classes.UserLogic)">
+            <summary>
+            GetPositionOneClubAsync method.
+            </summary>
+            <param name="userLogic">UserLogic parameter.</param>
+        </member>
+    </members>
+</doc>

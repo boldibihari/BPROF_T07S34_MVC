@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NationalChampionship.Repository</name>
+    </assembly>
+    <members>
+        <member name="T:NationalChampionship.Repository.Classes.ClubRepository">
+            <summary>
+            ClubRepository class with all CRUD methods.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Repository.Classes.ClubRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NationalChampionship.Repository.Classes.ClubRepository"/> class.
+            ClubRepository constructor.
+            </summary>
+            <param name="context">NationalChampionshipDbContext class implementation.</param>
+        </member>
+        <member name="M:NationalChampionship.Repository.Classes.ClubRepository.Update(System.Int32,NationalChampionship.Data.Models.Club)">
+            <summary>
+            Update method.
+            </summary>
+            <param name="oldid">ClubId that we want to update.</param>
+            <param name="newitem">The updated club.</param>
+        </member>
+        <member name="M:NationalChampionship.Repository.Classes.ClubRepository.GetOne(System.Int32)">
+            <summary>
+            GetOne method.
+            </summary>
+            <param name="id">Club to list.</param>
+            <returns>
+            One club.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Repository.Classes.ClubRepository.AddPlayerToClub(NationalChampionship.Data.Models.Player,System.Int32)">
+            <summary>
+            AddPlayerToClub method.
+            </summary>
+            <param name="player">Player to add.</param>
+            <param name="clubid">ClubId where we want to add.</param>
+        </member>
+        <member name="M:NationalChampionship.Repository.Classes.ClubRepository.AddManagerToClub(NationalChampionship.Data.Models.Manager,System.Int32)">
+            <summary>
+            AddManagerToClub method.
+            </summary>
+            <param name="manager">Manager to add.</param>
+            <param name="clubid">ClubId where we want to add.</param>
+        </member>
+        <member name="T:NationalChampionship.Repository.Classes.CommonRepository`1">
+            <summary>
+            CommonRepository main abstract class.
+            </summary>
+            <typeparam name="T">Any object.</typeparam>
+        </member>
+        <member name="F:NationalChampionship.Repository.Classes.CommonRepository`1.context">
+            <summary>
+            Context implementation.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Repository.Classes.CommonRepository`1.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NationalChampionship.Repository.Classes.CommonRepository`1"/> class.
+            CommonRepository constructor.
+            </summary>
+            <param name="context">NationalChampionshipDbContext class implementation.</param>
+        </member>
+        <member name="M:NationalChampionship.Repository.Classes.CommonRepository`1.Add(`0)">
+            <summary>
+            Add method.
+            </summary>
+            <param name="item">Any object.</param>
+        </member>
+        <member name="M:NationalChampionship.Repository.Classes.CommonRepository`1.Delete(`0)">
+            <summary>
+            Delete method.
+            </summary>
+            <param name="item">Any object.</param>
+        </member>
+        <member name="M:NationalChampionship.Repository.Classes.CommonRepository`1.Update(System.Int32,`0)">
+            <summary>
+            Update method.
+            </summary>
+            <param name="oldid">ObjectId that we want to update.</param>
+            <param name="newitem">The updated object.</param>
+        </member>
+        <member name="M:NationalChampionship.Repository.Classes.CommonRepository`1.GetOne(System.Int32)">
+            <summary>
+            GetOne method.
+            </summary>
+            <param name="id">Object to list.</param>
+            <returns>
+            One object.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Repository.Classes.CommonRepository`1.GetAll">
+            <summary>
+            GetAll method.
+            </summary>
+            <returns>
+            All object.
+            </returns>
+        </member>
+        <member name="T:NationalChampionship.Repository.Classes.ManagerRepository">
+            <summary>
+            ManagerRepository class with all CRUD methods.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Repository.Classes.ManagerRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NationalChampionship.Repository.Classes.ManagerRepository"/> class.
+            ClubRepository constructor.
+            </summary>
+            <param name="context">>NationalChampionshipDbContext class implementation.</param>
+        </member>
+        <member name="M:NationalChampionship.Repository.Classes.ManagerRepository.Update(System.Int32,NationalChampionship.Data.Models.Manager)">
+            <summary>
+            Update method.
+            </summary>
+            <param name="oldid">ManagerId that we want to update.</param>
+            <param name="newitem">The updated manager.</param>
+        </member>
+        <member name="M:NationalChampionship.Repository.Classes.ManagerRepository.GetOne(System.Int32)">
+            <summary>
+            GetOne method.
+            </summary>
+            <param name="id">Manager to list.</param>
+            <returns>
+            One manager.
+            </returns>
+        </member>
+        <member name="T:NationalChampionship.Repository.Classes.PlayerRepository">
+            <summary>
+            PlayerRepository class with all CRUD methods.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Repository.Classes.PlayerRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NationalChampionship.Repository.Classes.PlayerRepository"/> class.
+            PlayerRepository constructor.
+            </summary>
+            <param name="context">NationalChampionshipDbContext class implementation.</param>
+        </member>
+        <member name="M:NationalChampionship.Repository.Classes.PlayerRepository.Update(System.Int32,NationalChampionship.Data.Models.Player)">
+            <summary>
+            Update method.
+            </summary>
+            <param name="oldid">PlayerId that we want to update.</param>
+            <param name="newitem">The updated player.</param>
+        </member>
+        <member name="M:NationalChampionship.Repository.Classes.PlayerRepository.GetOne(System.Int32)">
+            <summary>
+            GetOne method.
+            </summary>
+            <param name="id">Player to list.</param>
+            <returns>
+            One player.
+            </returns>
+        </member>
+        <member name="T:NationalChampionship.Repository.Interfaces.IClubRepository">
+            <summary>
+            IClubRepository interface.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Repository.Interfaces.IClubRepository.AddPlayerToClub(NationalChampionship.Data.Models.Player,System.Int32)">
+            <summary>
+            AddPlayerToClub method.
+            </summary>
+            <param name="player">Player to add.</param>
+            <param name="clubid">ClubId where we want to add.</param>
+        </member>
+        <member name="M:NationalChampionship.Repository.Interfaces.IClubRepository.AddManagerToClub(NationalChampionship.Data.Models.Manager,System.Int32)">
+            <summary>
+            AddManagerToClub method.
+            </summary>
+            <param name="manager">Manager to add.</param>
+            <param name="clubid">ClubId where we want to add.</param>
+        </member>
+        <member name="T:NationalChampionship.Repository.Interfaces.ICommonRepository`1">
+            <summary>
+            ICommonRepository interface.
+            </summary>
+            <typeparam name="T">Any object.</typeparam>
+        </member>
+        <member name="M:NationalChampionship.Repository.Interfaces.ICommonRepository`1.Add(`0)">
+            <summary>
+            Add method.
+            </summary>
+            <param name="item">Any object.</param>
+        </member>
+        <member name="M:NationalChampionship.Repository.Interfaces.ICommonRepository`1.Delete(`0)">
+            <summary>
+            Delete method.
+            </summary>
+            <param name="item">Any object.</param>
+        </member>
+        <member name="M:NationalChampionship.Repository.Interfaces.ICommonRepository`1.Update(System.Int32,`0)">
+            <summary>
+            Update method.
+            </summary>
+            <param name="oldid">ObjectId that we want to update.</param>
+            <param name="newitem">The updated object.</param>
+        </member>
+        <member name="M:NationalChampionship.Repository.Interfaces.ICommonRepository`1.GetOne(System.Int32)">
+            <summary>
+            GetOne method.
+            </summary>
+            <param name="id">Object to list.</param>
+            <returns>
+            One object.
+            </returns>
+        </member>
+        <member name="M:NationalChampionship.Repository.Interfaces.ICommonRepository`1.GetAll">
+            <summary>
+            GetAll method.
+            </summary>
+            <returns>
+            All object.
+            </returns>
+        </member>
+        <member name="T:NationalChampionship.Repository.Interfaces.IManagerRepository">
+            <summary>
+            IManagerRepository interface.
+            </summary>
+        </member>
+        <member name="T:NationalChampionship.Repository.Interfaces.IPlayerRepository">
+            <summary>
+            IPlayerRepository interface.
+            </summary>
+        </member>
+    </members>
+</doc>

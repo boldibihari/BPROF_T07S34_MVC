@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NationalChampionship.Logic.Tests</name>
+    </assembly>
+    <members>
+        <member name="T:NationalChampionship.Logic.Tests.AdministratorLogicTests">
+            <summary>
+            AdministratorLogicTests test class.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Logic.Tests.AdministratorLogicTests.AddClubTest">
+            <summary>
+            AddClubTest test method.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Logic.Tests.AdministratorLogicTests.DeleteManagerTest">
+            <summary>
+            DeleteManagerTest test method.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Logic.Tests.AdministratorLogicTests.UpdatePlayerTest">
+            <summary>
+            UpdatePlayerTest test method.
+            </summary>
+        </member>
+        <member name="T:NationalChampionship.Logic.Tests.UserLogicTests">
+            <summary>
+            UserLogicTests test class.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Logic.Tests.UserLogicTests.GetOneClubTest">
+            <summary>
+            GetOneClubTest test method.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Logic.Tests.UserLogicTests.GetAllManagerTest">
+            <summary>
+            GetAllManagerTest test method.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Logic.Tests.UserLogicTests.AverageClubValueTest">
+            <summary>
+            AverageClubValueTest test method.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Logic.Tests.UserLogicTests.GetNationalityOneClubTest">
+            <summary>
+            GetNationalityOneClubTest test method.
+            </summary>
+        </member>
+        <member name="M:NationalChampionship.Logic.Tests.UserLogicTests.GetPositionOneClubTest">
+            <summary>
+            GetPositionOneClubTest test method.
+            </summary>
+        </member>
+    </members>
+</doc>
