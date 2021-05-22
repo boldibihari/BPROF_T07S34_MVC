@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NationalChampionship.Logic"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NationalChampionship.Logic.Tests", "NationalChampionship.Logic.Tests\NationalChampionship.Logic.Tests.csproj", "{856BE919-523E-491E-9C9A-DC42EE92521B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{2BDDA65A-F136-4BB5-83C2-D673DD80985A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{856BE919-523E-491E-9C9A-DC42EE92521B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{856BE919-523E-491E-9C9A-DC42EE92521B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{856BE919-523E-491E-9C9A-DC42EE92521B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BDDA65A-F136-4BB5-83C2-D673DD80985A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BDDA65A-F136-4BB5-83C2-D673DD80985A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BDDA65A-F136-4BB5-83C2-D673DD80985A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BDDA65A-F136-4BB5-83C2-D673DD80985A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
