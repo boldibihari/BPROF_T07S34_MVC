@@ -5,12 +5,14 @@
 namespace NationalChampionship.Data.Models
 {
     using System;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
 
     /// <summary>
     /// NationalChampionshipDbContext class.
     /// </summary>
-    public class NationalChampionshipDbContext : DbContext
+    public class NationalChampionshipDbContext : IdentityDbContext<IdentityUser>
     {
         /// <summary>
         /// Clubs table.
@@ -56,7 +58,8 @@ namespace NationalChampionship.Data.Models
             {
                 optionsBuilder.
                     UseLazyLoadingProxies().
-                    UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\NationalChampionshipDb.mdf;Integrated Security=True");
+                    //UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\NationalChampionshipDb.mdf;Integrated Security=True");
+                    UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=NationalChampionshipDatabase;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             }
         }
 
@@ -66,6 +69,73 @@ namespace NationalChampionship.Data.Models
         /// <param name="modelBuilder">ModelBuilder implementation.</param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<IdentityRole>().HasData(
+                new { Id = "341743f0-asd2–42de-afbf-59kmkkmk72cf6", Name = "Admin", NormalizedName = "ADMIN" },
+                new { Id = "341743f0-dee2–42de-bbbb-59kmkkmk72cf6", Name = "User", NormalizedName = "USER" });
+
+            var admin = new IdentityUser
+            {
+                Id = "02174cf0–9412–4cfe-afbf-59f706d72cf6",
+                Email = "admin@mail.com",
+                NormalizedEmail = "ADMIN@MAIL.COM",
+                EmailConfirmed = true,
+                UserName = "admin@mail.com",
+                NormalizedUserName = "ADMIN@MAIL.COM",
+                SecurityStamp = string.Empty,
+            };
+
+            var boldi = new IdentityUser
+            {
+                Id = "e2174cf0–9999–4cfe-afbf-59f706d72cf6",
+                Email = "boldibihari@nik.uni-obuda.hu",
+                NormalizedEmail = "BOLDIBIHARI@NIK.UNI-OBUDA.HU",
+                EmailConfirmed = true,
+                UserName = "boldibihari@nik.uni-obuda.hu",
+                NormalizedUserName = "BOLDIBIHARI@NIK.UNI-OBUDA.HU",
+                SecurityStamp = string.Empty,
+            };
+
+            var andris = new IdentityUser
+            {
+                Id = "e2174cf0–9412–4cfe-afbf-59f706d72cf6",
+                Email = "kovacs.andras@nik.uni-obuda.hu",
+                NormalizedEmail = "KOVACS.ANDRAS@NIK.UNI-OBUDA.HU",
+                EmailConfirmed = true,
+                UserName = "kovacs.andras@nik.uni-obuda.hu",
+                NormalizedUserName = "KOVACS.ANDRAS@NIK.UNI-OBUDA.HU",
+                SecurityStamp = string.Empty,
+            };
+
+            admin.PasswordHash = new PasswordHasher<IdentityUser>().HashPassword(null, "admin");
+            boldi.PasswordHash = new PasswordHasher<IdentityUser>().HashPassword(null, "boldi");
+            andris.PasswordHash = new PasswordHasher<IdentityUser>().HashPassword(null, "andris");
+
+            modelBuilder.Entity<IdentityUser>().HasData(admin);
+            modelBuilder.Entity<IdentityUser>().HasData(boldi);
+            modelBuilder.Entity<IdentityUser>().HasData(andris);
+
+            // Admin
+            modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
+            {
+                RoleId = "341743f0-asd2–42de-afbf-59kmkkmk72cf6",
+                UserId = admin.Id,
+            });
+
+            // User
+            modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
+            {
+                RoleId = "341743f0-dee2–42de-bbbb-59kmkkmk72cf6",
+                UserId = boldi.Id,
+            });
+
+            modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
+            {
+                RoleId = "341743f0-dee2–42de-bbbb-59kmkkmk72cf6",
+                UserId = andris.Id,
+            });
+
             modelBuilder.Entity<Player>(entity =>
             {
                 entity

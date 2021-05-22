@@ -7,6 +7,7 @@ namespace NationalChampionship.Data.Models
     using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// PlayerPosition enum.
@@ -82,6 +83,7 @@ namespace NationalChampionship.Data.Models
         /// <summary>
         /// Club NotMapped navigation property.
         /// </summary>
+        [JsonIgnore]
         [NotMapped]
         public virtual Club Club { get; set; }
 
