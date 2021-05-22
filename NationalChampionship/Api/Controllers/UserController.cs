@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using NationalChampionship.Data.Models;
 using NationalChampionship.Logic.Classes;
 using NationalChampionship.Logic.Interfaces;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace Api.Controllers
 {
+    [Authorize(Roles = "User")]
     [ApiController]
     [Route("{controller}")]
     public class UserController : ControllerBase

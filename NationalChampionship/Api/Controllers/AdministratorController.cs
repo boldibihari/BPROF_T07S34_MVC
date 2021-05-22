@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using NationalChampionship.Data.Models;
 using NationalChampionship.Logic.Interfaces;
 using System;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Api.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [ApiController]
     [Route("{controller}")]
     public class AdministratorController : ControllerBase
@@ -19,7 +21,7 @@ namespace Api.Controllers
             this.administratorLogic = administratorLogic;
         }
 
-        [HttpPost("AddManager")]
+        [HttpPost("AddClub")]
         public void AddClub([FromBody] Club club)
         {
             this.administratorLogic.AddClub(club);
@@ -49,7 +51,7 @@ namespace Api.Controllers
             this.administratorLogic.DeleteManager(managerId);
         }
 
-        [HttpDelete("DeleteClub/{playerId}")]
+        [HttpDelete("DeletePlayer/{playerId}")]
         public void DeletePlayer(int playerId)
         {
             this.administratorLogic.DeletePlayer(playerId);
