@@ -1,0 +1,17 @@
+﻿<Window x:Class="NationalChampionship.WpfClient.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NationalChampionship.WpfClient"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="450" Width="800">
+    <StackPanel>
+        <Button Content="REGISTRATION" Margin="10" Click="RegisterButtonClick"/>
+        <Label Content="Username" Background="LightBlue" Margin="10" />
+        <TextBox x:Name="username" Margin="10" />
+        <Label Content="Password" Background="LightBlue" Margin="10" />
+        <PasswordBox x:Name="password" Margin="10" />
+        <Button Content="LOGIN" Margin="10" Click="LoginButtonClick"/>
+    </StackPanel>
+</Window>
