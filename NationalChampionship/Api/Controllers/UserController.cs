@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Api.Controllers
 {
-    [Authorize(Roles = "User")]
+    [Authorize]
     [ApiController]
     [Route("{controller}")]
     public class UserController : ControllerBase

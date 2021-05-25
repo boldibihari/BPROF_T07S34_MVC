@@ -27,16 +27,16 @@ namespace Api.Controllers
             this.administratorLogic.AddClub(club);
         }
 
-        [HttpPost("AddManager/{managerId}")]
-        public void AddManagerToClub([FromBody] Manager manager, int managerId)
+        [HttpPost("AddManager/{clubId}")]
+        public void AddManagerToClub([FromBody] Manager manager, int clubId)
         {
-            this.administratorLogic.AddManagerToClub(manager, managerId);
+            this.administratorLogic.AddManagerToClub(manager, clubId);
         }
 
-        [HttpPost("AddPlayer/{playerId}")]
-        public void AddPlayerToClub([FromBody] Player player, int playerId)
+        [HttpPost("AddPlayer/{clubId}")]
+        public void AddPlayerToClub([FromBody] Player player, int clubId)
         {
-            this.administratorLogic.AddPlayerToClub(player, playerId);
+            this.administratorLogic.AddPlayerToClub(player, clubId);
         }
 
         [HttpDelete("DeleteClub/{clubId}")]
