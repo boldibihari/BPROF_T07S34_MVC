@@ -79,6 +79,14 @@ namespace NationalChampionship.WpfClient
             response.EnsureSuccessStatusCode();
         }
 
+        public async void Post<K, T>(K item, T id)
+        {
+            HttpResponseMessage response =
+                await client.PostAsJsonAsync(endpoint + "/" + id.ToString(), item);
+
+            response.EnsureSuccessStatusCode();
+        }
+
         public async Task<R> Delete<R, K>(K id)
         {
             HttpResponseMessage response =
