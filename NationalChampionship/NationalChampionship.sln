@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NationalChampionship.Logic.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NationalChampionship.WpfClient", "NationalChampionship.WpfClient\NationalChampionship.WpfClient.csproj", "{428E081A-DFEC-47DC-971B-3580097CB057}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NationalChampionship.Api", "NationalChampionship.Api\NationalChampionship.Api.csproj", "{B01F797C-47CC-4521-97E6-9EA5E266A54E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NationalChampionship.Api", "NationalChampionship.Api\NationalChampionship.Api.csproj", "{B01F797C-47CC-4521-97E6-9EA5E266A54E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

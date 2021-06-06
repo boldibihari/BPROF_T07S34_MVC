@@ -23,6 +23,8 @@ namespace NationalChampionship.WpfClient
     {
         public string Token { get; private set; }
 
+        string link = "https://nationalchampionshipapi20210606141430.azurewebsites.net/";
+
         public LoginWindow()
         {
             InitializeComponent();
@@ -32,7 +34,7 @@ namespace NationalChampionship.WpfClient
         {
             try
             {
-                RestService restservice = new RestService("https://localhost:5001/", "/Auth");
+                RestService restservice = new RestService(link, "/Auth");
                 TokenViewModel tvm = await restservice.Put<TokenViewModel, LoginViewModel>(new LoginViewModel()
                 {
                     Username = username.Text,
@@ -49,7 +51,7 @@ namespace NationalChampionship.WpfClient
 
         private void RegisterButtonClick(object sender, RoutedEventArgs e)
         {
-            RestService restservice = new RestService("https://localhost:5001/", "/Auth");
+            RestService restservice = new RestService(link, "/Auth");
             restservice.Post<RegisterViewModel>(new RegisterViewModel()
             {
                 Email = username.Text,

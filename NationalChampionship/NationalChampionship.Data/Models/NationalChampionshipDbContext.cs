@@ -59,7 +59,8 @@ namespace NationalChampionship.Data.Models
                 optionsBuilder.
                     UseLazyLoadingProxies().
                     //UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\NationalChampionshipDb.mdf;Integrated Security=True");
-                    UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=NationalChampionshipDatabase;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+                    //UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=NationalChampionshipDatabase;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+                    UseSqlServer(@"Server=tcp:boldibihari.database.windows.net,1433;Initial Catalog=NationalChampionshipDatabase;Persist Security Info=False;User ID=boldibihari;Password=PeTrOnElLa13579;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
 

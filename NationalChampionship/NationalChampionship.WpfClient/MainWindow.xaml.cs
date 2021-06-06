@@ -27,6 +27,8 @@ namespace NationalChampionship.WpfClient
         public string Token { get; set; }
         public string Username { get; set; }
 
+        string link = "https://nationalchampionshipapi20210606141430.azurewebsites.net/";
+
         public MainWindow()
         {
             InitializeComponent();
@@ -48,7 +50,7 @@ namespace NationalChampionship.WpfClient
         public async Task GetAllClub()
         {
             cbox.ItemsSource = null;
-            RestService restservice = new RestService("https://localhost:5001/", "/User/GetAllCLub", Token);
+            RestService restservice = new RestService(link, "/User/GetAllCLub", Token);
             IEnumerable<Club> clubs = await restservice.Get<Club>();
 
             cbox.ItemsSource = clubs;
@@ -59,7 +61,7 @@ namespace NationalChampionship.WpfClient
         {
             int index = cbox.SelectedIndex;
             cbox.ItemsSource = null;
-            RestService restService = new RestService("https://localhost:5001/", "/User/GetAllCLub", Token);
+            RestService restService = new RestService(link, "/User/GetAllCLub", Token);
             IEnumerable<Club> clubs = await restService.Get<Club>();
             cbox.ItemsSource = clubs;
             cbox.SelectedIndex = index;
@@ -68,17 +70,17 @@ namespace NationalChampionship.WpfClient
         public async void StatisticsButtonClick(object sender, RoutedEventArgs e)
         {
             StatisticsWindow statistics = new StatisticsWindow();
-            RestService restservice1 = new RestService("https://localhost:5001/", "/User/AllValue", Token);
+            RestService restservice1 = new RestService(link, "/User/AllValue", Token);
             statistics.allvalue.Content = await restservice1.GetOne<double>();
-            RestService restservice2 = new RestService("https://localhost:5001/", "/User/AllAverageAge", Token);
+            RestService restservice2 = new RestService(link, "/User/AllAverageAge", Token);
             statistics.allaverageage.Content = await restservice2.GetOne<int>();
-            RestService restservice3 = new RestService("https://localhost:5001/", "/User/AverageClubValue", Token);
+            RestService restservice3 = new RestService(link, "/User/AverageClubValue", Token);
             statistics.averageclubvalue.Content = await restservice3.GetOne<double>();
-            RestService restservice4 = new RestService("https://localhost:5001/", "/User/AveragePlayerValue", Token);
+            RestService restservice4 = new RestService(link, "/User/AveragePlayerValue", Token);
             statistics.averageplayervalue.Content = await restservice4.GetOne<double>();
-            RestService restservice5 = new RestService("https://localhost:5001/", "/User/GetAllNationality", Token);
+            RestService restservice5 = new RestService(link, "/User/GetAllNationality", Token);
             statistics.nationalities.ItemsSource = await restservice5.Get<Nationality>();
-            RestService restservice6 = new RestService("https://localhost:5001/", "/User/GetAllPosition", Token);
+            RestService restservice6 = new RestService(link, "/User/GetAllPosition", Token);
             statistics.positions.ItemsSource = await restservice6.Get<Position>();
             statistics.ShowDialog();
         }
@@ -106,7 +108,7 @@ namespace NationalChampionship.WpfClient
                         Stadium = add.Stadium
                     };
 
-                    RestService restservice = new RestService("https://localhost:5001/", "/Administrator/AddClub", Token);
+                    RestService restservice = new RestService(link, "/Administrator/AddClub", Token);
                     restservice.Post(newClub);
                     MessageBox.Show("Club added!");
                     RefreshClubs();
@@ -128,7 +130,7 @@ namespace NationalChampionship.WpfClient
             {
                 if (cbox.SelectedItem as Club != null)
                 {
-                    RestService restService = new RestService("https://localhost:5001/", "/Administrator/DeleteClub", Token);
+                    RestService restService = new RestService(link, "/Administrator/DeleteClub", Token);
                     restService.Delete((cbox.SelectedItem as Club).ClubId);
                     MessageBox.Show("Club deleted!");
                     RefreshClubs();
@@ -158,7 +160,7 @@ namespace NationalChampionship.WpfClient
                     update.stadium.Text = (cbox.SelectedItem as Club).Stadium;
                     if (update.ShowDialog() == true)
                     {
-                        RestService restService = new RestService("https://localhost:5001/", "/Administrator/UpdateClub", Token);
+                        RestService restService = new RestService(link, "/Administrator/UpdateClub", Token);
 
                         Club club = new Club()
                         {
@@ -204,7 +206,7 @@ namespace NationalChampionship.WpfClient
                             WonChampionship = add.WonChampionship
                         };
 
-                        RestService restservice = new RestService("https://localhost:5001/", "/Administrator/AddManager", Token);
+                        RestService restservice = new RestService(link, "/Administrator/AddManager", Token);
                         restservice.Post(manager, (cbox.SelectedItem as Club).ClubId);
                         MessageBox.Show("Manager added!");
                         RefreshClubs();
@@ -227,7 +229,7 @@ namespace NationalChampionship.WpfClient
             {
                 if (cbox.SelectedItem as Club != null && (cbox.SelectedItem as Club).Manager != null)
                 {
-                    RestService restService = new RestService("https://localhost:5001/", "/Administrator/DeleteManager", Token);
+                    RestService restService = new RestService(link, "/Administrator/DeleteManager", Token);
                     restService.Delete((cbox.SelectedItem as Club).Manager.ManagerId);
                     MessageBox.Show("Manager deleted!");
                     RefreshClubs();
@@ -257,7 +259,7 @@ namespace NationalChampionship.WpfClient
                     update.wonchampionship.IsChecked = (cbox.SelectedItem as Club).Manager.WonChampionship;
                     if (update.ShowDialog() == true)
                     {
-                        RestService restService = new RestService("https://localhost:5001/", "/Administrator/UpdateManager", Token);
+                        RestService restService = new RestService(link, "/Administrator/UpdateManager", Token);
 
                         Manager manager = new Manager()
                         {
@@ -303,7 +305,7 @@ namespace NationalChampionship.WpfClient
                             PlayerValue = add.PlayerValue
                         };
 
-                        RestService restservice = new RestService("https://localhost:5001/", "/Administrator/AddPlayer", Token);
+                        RestService restservice = new RestService(link, "/Administrator/AddPlayer", Token);
                         restservice.Post(player, (cbox.SelectedItem as Club).ClubId);
                         MessageBox.Show("Player added!");
                         RefreshClubs();
@@ -326,7 +328,7 @@ namespace NationalChampionship.WpfClient
             {
                 if (players.SelectedItem as Player != null)
                 {
-                    RestService restService = new RestService("https://localhost:5001/", "/Administrator/DeletePlayer", Token);
+                    RestService restService = new RestService(link, "/Administrator/DeletePlayer", Token);
                     restService.Delete((players.SelectedItem as Player).PlayerId);
                     MessageBox.Show("Player deleted!");
                     RefreshClubs();
@@ -356,7 +358,7 @@ namespace NationalChampionship.WpfClient
                     update.value.Text = (players.SelectedItem as Player).PlayerValue.ToString();
                     if (update.ShowDialog() == true)
                     {
-                        RestService restService = new RestService("https://localhost:5001/", "/Administrator/UpdatePlayer", Token);
+                        RestService restService = new RestService(link, "/Administrator/UpdatePlayer", Token);
 
                         Player player = new Player()
                         {
