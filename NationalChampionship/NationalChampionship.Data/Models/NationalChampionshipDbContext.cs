@@ -152,7 +152,7 @@ namespace NationalChampionship.Data.Models
             });
 
             #region FillDatabase
-            Club c1 = new ()
+            Club c1 = new()
             {
                 ClubId = 1,
                 ClubName = "Ferencvárosi TC",
@@ -161,7 +161,7 @@ namespace NationalChampionship.Data.Models
                 ClubFounded = 1899,
                 Stadium = "Groupama Aréna",
             };
-            Club c2 = new ()
+            Club c2 = new()
             {
                 ClubId = 2,
                 ClubName = "MOL Fehérvár",
@@ -170,7 +170,7 @@ namespace NationalChampionship.Data.Models
                 ClubFounded = 1914,
                 Stadium = "MOL Aréna Sóstó",
             };
-            Club c3 = new ()
+            Club c3 = new()
             {
                 ClubId = 3,
                 ClubName = "Puskás Akadémia FC",
@@ -179,7 +179,7 @@ namespace NationalChampionship.Data.Models
                 ClubFounded = 2012,
                 Stadium = "Pancho Aréna",
             };
-            Club c4 = new ()
+            Club c4 = new()
             {
                 ClubId = 4,
                 ClubName = "Mezőkövesd Zsóry FC",
@@ -188,7 +188,7 @@ namespace NationalChampionship.Data.Models
                 ClubFounded = 1975,
                 Stadium = "Mezőkövesdi Stadion",
             };
-            Club c5 = new ()
+            Club c5 = new()
             {
                 ClubId = 5,
                 ClubName = "Budapest Honvéd FC",
@@ -197,7 +197,7 @@ namespace NationalChampionship.Data.Models
                 ClubFounded = 1909,
                 Stadium = "Bozsik József Stadion",
             };
-            Club c6 = new ()
+            Club c6 = new()
             {
                 ClubId = 6,
                 ClubName = "Újpest FC",
@@ -207,7 +207,7 @@ namespace NationalChampionship.Data.Models
                 Stadium = "Szusza Ferenc Stadion",
             };
 
-            Manager m1 = new ()
+            Manager m1 = new()
             {
                 ManagerId = 1,
                 ManagerName = "Szerhij Rebrov",
@@ -217,7 +217,7 @@ namespace NationalChampionship.Data.Models
                 WonChampionship = true,
                 ClubId = c1.ClubId,
             };
-            Manager m2 = new ()
+            Manager m2 = new()
             {
                 ManagerId = 2,
                 ManagerName = "Gábor Márton",
@@ -227,7 +227,7 @@ namespace NationalChampionship.Data.Models
                 WonChampionship = false,
                 ClubId = c2.ClubId,
             };
-            Manager m3 = new ()
+            Manager m3 = new()
             {
                 ManagerId = 3,
                 ManagerName = "Zsolt Hornyák",
@@ -237,7 +237,7 @@ namespace NationalChampionship.Data.Models
                 WonChampionship = false,
                 ClubId = c3.ClubId,
             };
-            Manager m4 = new ()
+            Manager m4 = new()
             {
                 ManagerId = 4,
                 ManagerName = "Attila Kuttor",
@@ -247,7 +247,7 @@ namespace NationalChampionship.Data.Models
                 WonChampionship = false,
                 ClubId = c4.ClubId,
             };
-            Manager m5 = new ()
+            Manager m5 = new()
             {
                 ManagerId = 5,
                 ManagerName = "Tamás Bódog",
@@ -257,7 +257,7 @@ namespace NationalChampionship.Data.Models
                 WonChampionship = false,
                 ClubId = c5.ClubId,
             };
-            Manager m6 = new ()
+            Manager m6 = new()
             {
                 ManagerId = 6,
                 ManagerName = "Pedrag Rogan",
@@ -268,7 +268,7 @@ namespace NationalChampionship.Data.Models
                 ClubId = c6.ClubId,
             };
 
-            Player p1 = new ()
+            Player p1 = new()
             {
                 PlayerId = 1,
                 PlayerName = "Dénes Dibusz",
@@ -278,7 +278,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 2.20,
                 ClubId = c1.ClubId,
             };
-            Player p2 = new ()
+            Player p2 = new()
             {
                 PlayerId = 2,
                 PlayerName = "Ádám Bogdán",
@@ -288,7 +288,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.350,
                 ClubId = c1.ClubId,
             };
-            Player p3 = new ()
+            Player p3 = new()
             {
                 PlayerId = 3,
                 PlayerName = "Miha Blazic",
@@ -298,7 +298,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 2.00,
                 ClubId = c1.ClubId,
             };
-            Player p4 = new ()
+            Player p4 = new()
             {
                 PlayerId = 4,
                 PlayerName = "Adnan Kovacevic",
@@ -308,7 +308,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 1.20,
                 ClubId = c1.ClubId,
             };
-            Player p5 = new ()
+            Player p5 = new()
             {
                 PlayerId = 5,
                 PlayerName = "Eldar Civic",
@@ -318,7 +318,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 1.50,
                 ClubId = c1.ClubId,
             };
-            Player p6 = new ()
+            Player p6 = new()
             {
                 PlayerId = 6,
                 PlayerName = "Endre Botka",
@@ -328,7 +328,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 1.00,
                 ClubId = c1.ClubId,
             };
-            Player p7 = new ()
+            Player p7 = new()
             {
                 PlayerId = 7,
                 PlayerName = "Gergő Lovrencsics C",
@@ -338,7 +338,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.800,
                 ClubId = c1.ClubId,
             };
-            Player p8 = new ()
+            Player p8 = new()
             {
                 PlayerId = 8,
                 PlayerName = "Igor Kharatin",
@@ -348,7 +348,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 2.50,
                 ClubId = c1.ClubId,
             };
-            Player p9 = new ()
+            Player p9 = new()
             {
                 PlayerId = 9,
                 PlayerName = "Somália",
@@ -358,7 +358,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 1.30,
                 ClubId = c1.ClubId,
             };
-            Player p10 = new ()
+            Player p10 = new()
             {
                 PlayerId = 10,
                 PlayerName = "Dávid Sigér",
@@ -368,7 +368,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 1.00,
                 ClubId = c1.ClubId,
             };
-            Player p11 = new ()
+            Player p11 = new()
             {
                 PlayerId = 11,
                 PlayerName = "Isael",
@@ -378,7 +378,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 1.50,
                 ClubId = c1.ClubId,
             };
-            Player p12 = new ()
+            Player p12 = new()
             {
                 PlayerId = 12,
                 PlayerName = "Tokmac Nguen",
@@ -388,7 +388,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 2.80,
                 ClubId = c1.ClubId,
             };
-            Player p13 = new ()
+            Player p13 = new()
             {
                 PlayerId = 13,
                 PlayerName = "Myrto Uzuni",
@@ -398,7 +398,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 2.20,
                 ClubId = c1.ClubId,
             };
-            Player p14 = new ()
+            Player p14 = new()
             {
                 PlayerId = 14,
                 PlayerName = "Oleksandr Zubkov",
@@ -408,7 +408,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 2.00,
                 ClubId = c1.ClubId,
             };
-            Player p15 = new ()
+            Player p15 = new()
             {
                 PlayerId = 15,
                 PlayerName = "Franck Boli",
@@ -418,7 +418,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 1.00,
                 ClubId = c1.ClubId,
             };
-            Player p16 = new ()
+            Player p16 = new()
             {
                 PlayerId = 16,
                 PlayerName = "Ádám Kovácsik",
@@ -428,7 +428,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.900,
                 ClubId = c2.ClubId,
             };
-            Player p17 = new ()
+            Player p17 = new()
             {
                 PlayerId = 17,
                 PlayerName = "Emil Rockov",
@@ -438,7 +438,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.900,
                 ClubId = c2.ClubId,
             };
-            Player p18 = new ()
+            Player p18 = new()
             {
                 PlayerId = 18,
                 PlayerName = "Visar Musliu",
@@ -448,7 +448,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 1.00,
                 ClubId = c2.ClubId,
             };
-            Player p19 = new ()
+            Player p19 = new()
             {
                 PlayerId = 19,
                 PlayerName = "Stopira",
@@ -458,7 +458,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.500,
                 ClubId = c2.ClubId,
             };
-            Player p20 = new ()
+            Player p20 = new()
             {
                 PlayerId = 20,
                 PlayerName = "Hangya Szilveszter",
@@ -468,7 +468,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.450,
                 ClubId = c2.ClubId,
             };
-            Player p21 = new ()
+            Player p21 = new()
             {
                 PlayerId = 21,
                 PlayerName = "Loic Nego",
@@ -478,7 +478,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 2.20,
                 ClubId = c2.ClubId,
             };
-            Player p22 = new ()
+            Player p22 = new()
             {
                 PlayerId = 22,
                 PlayerName = "Bendegúz Bolla",
@@ -488,7 +488,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.400,
                 ClubId = c2.ClubId,
             };
-            Player p23 = new ()
+            Player p23 = new()
             {
                 PlayerId = 23,
                 PlayerName = "Rúben Pinto",
@@ -498,7 +498,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 1.00,
                 ClubId = c2.ClubId,
             };
-            Player p24 = new ()
+            Player p24 = new()
             {
                 PlayerId = 24,
                 PlayerName = "Lyes Houri",
@@ -508,7 +508,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 1.10,
                 ClubId = c2.ClubId,
             };
-            Player p25 = new ()
+            Player p25 = new()
             {
                 PlayerId = 25,
                 PlayerName = "Boban Nikolov",
@@ -518,7 +518,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.750,
                 ClubId = c2.ClubId,
             };
-            Player p26 = new ()
+            Player p26 = new()
             {
                 PlayerId = 26,
                 PlayerName = "István Kovács",
@@ -528,7 +528,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.550,
                 ClubId = c2.ClubId,
             };
-            Player p27 = new ()
+            Player p27 = new()
             {
                 PlayerId = 27,
                 PlayerName = "Ivan Petryak",
@@ -538,7 +538,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 1.60,
                 ClubId = c2.ClubId,
             };
-            Player p28 = new ()
+            Player p28 = new()
             {
                 PlayerId = 28,
                 PlayerName = "Evandro",
@@ -548,7 +548,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 1.20,
                 ClubId = c2.ClubId,
             };
-            Player p29 = new ()
+            Player p29 = new()
             {
                 PlayerId = 29,
                 PlayerName = "Nemanja Nikolics C",
@@ -558,7 +558,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 1.50,
                 ClubId = c2.ClubId,
             };
-            Player p30 = new ()
+            Player p30 = new()
             {
                 PlayerId = 30,
                 PlayerName = "Armin Hodzic",
@@ -568,7 +568,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 1.00,
                 ClubId = c2.ClubId,
             };
-            Player p31 = new ()
+            Player p31 = new()
             {
                 PlayerId = 31,
                 PlayerName = "Balázs Tóth",
@@ -578,7 +578,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.250,
                 ClubId = c3.ClubId,
             };
-            Player p32 = new ()
+            Player p32 = new()
             {
                 PlayerId = 32,
                 PlayerName = "Ágoston Kiss",
@@ -588,7 +588,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.100,
                 ClubId = c3.ClubId,
             };
-            Player p33 = new ()
+            Player p33 = new()
             {
                 PlayerId = 33,
                 PlayerName = "Thomas Meißner",
@@ -598,7 +598,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.600,
                 ClubId = c3.ClubId,
             };
-            Player p34 = new ()
+            Player p34 = new()
             {
                 PlayerId = 34,
                 PlayerName = "João Nunes",
@@ -608,7 +608,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.400,
                 ClubId = c3.ClubId,
             };
-            Player p35 = new ()
+            Player p35 = new()
             {
                 PlayerId = 35,
                 PlayerName = "Kamen Hadzhiev",
@@ -618,7 +618,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.400,
                 ClubId = c3.ClubId,
             };
-            Player p36 = new ()
+            Player p36 = new()
             {
                 PlayerId = 36,
                 PlayerName = "Zsolt Nagy",
@@ -628,7 +628,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.300,
                 ClubId = c3.ClubId,
             };
-            Player p37 = new ()
+            Player p37 = new()
             {
                 PlayerId = 37,
                 PlayerName = "Roland Szolnoki C",
@@ -638,7 +638,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.300,
                 ClubId = c3.ClubId,
             };
-            Player p38 = new ()
+            Player p38 = new()
             {
                 PlayerId = 38,
                 PlayerName = "Yoëll van Nieff",
@@ -648,7 +648,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.600,
                 ClubId = c3.ClubId,
             };
-            Player p39 = new ()
+            Player p39 = new()
             {
                 PlayerId = 39,
                 PlayerName = "Jakub Plsek",
@@ -658,7 +658,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.500,
                 ClubId = c3.ClubId,
             };
-            Player p40 = new ()
+            Player p40 = new()
             {
                 PlayerId = 40,
                 PlayerName = "Jozef Urblik",
@@ -668,7 +668,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.400,
                 ClubId = c3.ClubId,
             };
-            Player p41 = new ()
+            Player p41 = new()
             {
                 PlayerId = 41,
                 PlayerName = "Josip Knezevic",
@@ -678,7 +678,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.500,
                 ClubId = c3.ClubId,
             };
-            Player p42 = new ()
+            Player p42 = new()
             {
                 PlayerId = 42,
                 PlayerName = "Tamás Kiss",
@@ -688,7 +688,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.400,
                 ClubId = c3.ClubId,
             };
-            Player p43 = new ()
+            Player p43 = new()
             {
                 PlayerId = 43,
                 PlayerName = "Alexandru Baluta",
@@ -698,7 +698,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 2.00,
                 ClubId = c3.ClubId,
             };
-            Player p44 = new ()
+            Player p44 = new()
             {
                 PlayerId = 44,
                 PlayerName = "Antonio Mance",
@@ -708,7 +708,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 1.30,
                 ClubId = c3.ClubId,
             };
-            Player p45 = new ()
+            Player p45 = new()
             {
                 PlayerId = 45,
                 PlayerName = "David Vanecek",
@@ -718,7 +718,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.650,
                 ClubId = c3.ClubId,
             };
-            Player p46 = new ()
+            Player p46 = new()
             {
                 PlayerId = 46,
                 PlayerName = "Péter Szappanos",
@@ -728,7 +728,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.350,
                 ClubId = c4.ClubId,
             };
-            Player p47 = new ()
+            Player p47 = new()
             {
                 PlayerId = 47,
                 PlayerName = "Danylo Ryabenko",
@@ -738,7 +738,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.100,
                 ClubId = c4.ClubId,
             };
-            Player p48 = new ()
+            Player p48 = new()
             {
                 PlayerId = 48,
                 PlayerName = "Andriy Nesterov",
@@ -748,7 +748,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.350,
                 ClubId = c4.ClubId,
             };
-            Player p49 = new ()
+            Player p49 = new()
             {
                 PlayerId = 49,
                 PlayerName = "Róbert Pillár",
@@ -758,7 +758,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.300,
                 ClubId = c4.ClubId,
             };
-            Player p50 = new ()
+            Player p50 = new()
             {
                 PlayerId = 50,
                 PlayerName = "Richárd Guzmics",
@@ -768,7 +768,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.200,
                 ClubId = c4.ClubId,
             };
-            Player p51 = new ()
+            Player p51 = new()
             {
                 PlayerId = 51,
                 PlayerName = "Luka Lakvekheliani",
@@ -778,7 +778,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.450,
                 ClubId = c4.ClubId,
             };
-            Player p52 = new ()
+            Player p52 = new()
             {
                 PlayerId = 52,
                 PlayerName = "Dániel Farkas",
@@ -788,7 +788,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.300,
                 ClubId = c4.ClubId,
             };
-            Player p53 = new ()
+            Player p53 = new()
             {
                 PlayerId = 53,
                 PlayerName = "Aleksandr Karnitskiy",
@@ -798,7 +798,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.400,
                 ClubId = c4.ClubId,
             };
-            Player p54 = new ()
+            Player p54 = new()
             {
                 PlayerId = 54,
                 PlayerName = "Zsombor Berecz",
@@ -808,7 +808,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.550,
                 ClubId = c4.ClubId,
             };
-            Player p55 = new ()
+            Player p55 = new()
             {
                 PlayerId = 55,
                 PlayerName = "Dino Berisovic",
@@ -818,7 +818,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.400,
                 ClubId = c4.ClubId,
             };
-            Player p56 = new ()
+            Player p56 = new()
             {
                 PlayerId = 56,
                 PlayerName = "Antonio Vutov",
@@ -828,7 +828,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.600,
                 ClubId = c4.ClubId,
             };
-            Player p57 = new ()
+            Player p57 = new()
             {
                 PlayerId = 57,
                 PlayerName = "Tamás Cseri C",
@@ -838,7 +838,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.400,
                 ClubId = c4.ClubId,
             };
-            Player p58 = new ()
+            Player p58 = new()
             {
                 PlayerId = 58,
                 PlayerName = "Serder Serderov",
@@ -848,7 +848,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.600,
                 ClubId = c4.ClubId,
             };
-            Player p59 = new ()
+            Player p59 = new()
             {
                 PlayerId = 59,
                 PlayerName = "Andriy Boryachuk",
@@ -858,7 +858,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.450,
                 ClubId = c4.ClubId,
             };
-            Player p60 = new ()
+            Player p60 = new()
             {
                 PlayerId = 60,
                 PlayerName = "Marin Jurina",
@@ -868,7 +868,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.300,
                 ClubId = c4.ClubId,
             };
-            Player p61 = new ()
+            Player p61 = new()
             {
                 PlayerId = 61,
                 PlayerName = "Tomas Tujvel",
@@ -878,7 +878,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.150,
                 ClubId = c5.ClubId,
             };
-            Player p62 = new ()
+            Player p62 = new()
             {
                 PlayerId = 62,
                 PlayerName = "Oleksandr Nad",
@@ -888,7 +888,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.150,
                 ClubId = c5.ClubId,
             };
-            Player p63 = new ()
+            Player p63 = new()
             {
                 PlayerId = 63,
                 PlayerName = "Botond Baráth",
@@ -898,7 +898,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.500,
                 ClubId = c5.ClubId,
             };
-            Player p64 = new ()
+            Player p64 = new()
             {
                 PlayerId = 64,
                 PlayerName = "Bence Batik",
@@ -908,7 +908,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.400,
                 ClubId = c5.ClubId,
             };
-            Player p65 = new ()
+            Player p65 = new()
             {
                 PlayerId = 65,
                 PlayerName = "Djordje Kamber",
@@ -918,7 +918,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.100,
                 ClubId = c5.ClubId,
             };
-            Player p66 = new ()
+            Player p66 = new()
             {
                 PlayerId = 66,
                 PlayerName = "Krisztián Tamás",
@@ -928,7 +928,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.400,
                 ClubId = c5.ClubId,
             };
-            Player p67 = new ()
+            Player p67 = new()
             {
                 PlayerId = 67,
                 PlayerName = "Eke Uzoma",
@@ -938,7 +938,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.300,
                 ClubId = c5.ClubId,
             };
-            Player p68 = new ()
+            Player p68 = new()
             {
                 PlayerId = 68,
                 PlayerName = "Mohamed Mezghrani",
@@ -948,7 +948,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.350,
                 ClubId = c5.ClubId,
             };
-            Player p69 = new ()
+            Player p69 = new()
             {
                 PlayerId = 69,
                 PlayerName = "Patrik Hidi C",
@@ -958,7 +958,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.500,
                 ClubId = c5.ClubId,
             };
-            Player p70 = new ()
+            Player p70 = new()
             {
                 PlayerId = 70,
                 PlayerName = "Dániel Gazdag",
@@ -968,7 +968,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 1.00,
                 ClubId = c5.ClubId,
             };
-            Player p71 = new ()
+            Player p71 = new()
             {
                 PlayerId = 71,
                 PlayerName = "Gergő Nagy",
@@ -978,7 +978,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.400,
                 ClubId = c5.ClubId,
             };
-            Player p72 = new ()
+            Player p72 = new()
             {
                 PlayerId = 72,
                 PlayerName = "Donát Zsótér",
@@ -988,7 +988,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.450,
                 ClubId = c5.ClubId,
             };
-            Player p73 = new ()
+            Player p73 = new()
             {
                 PlayerId = 73,
                 PlayerName = "Márton Eppel",
@@ -998,7 +998,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 1.40,
                 ClubId = c5.ClubId,
             };
-            Player p74 = new ()
+            Player p74 = new()
             {
                 PlayerId = 74,
                 PlayerName = "Norbert Balogh",
@@ -1008,7 +1008,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.450,
                 ClubId = c5.ClubId,
             };
-            Player p75 = new ()
+            Player p75 = new()
             {
                 PlayerId = 75,
                 PlayerName = "Roland Ugrai",
@@ -1018,7 +1018,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.450,
                 ClubId = c5.ClubId,
             };
-            Player p76 = new ()
+            Player p76 = new()
             {
                 PlayerId = 76,
                 PlayerName = "Filip Pajovic",
@@ -1028,7 +1028,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.200,
                 ClubId = c6.ClubId,
             };
-            Player p77 = new ()
+            Player p77 = new()
             {
                 PlayerId = 77,
                 PlayerName = "Dávid Banai",
@@ -1038,7 +1038,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.250,
                 ClubId = c6.ClubId,
             };
-            Player p78 = new ()
+            Player p78 = new()
             {
                 PlayerId = 78,
                 PlayerName = "Kire Ristevski",
@@ -1048,7 +1048,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.400,
                 ClubId = c6.ClubId,
             };
-            Player p79 = new ()
+            Player p79 = new()
             {
                 PlayerId = 79,
                 PlayerName = "Georgios Koutroumpis",
@@ -1058,7 +1058,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.400,
                 ClubId = c6.ClubId,
             };
-            Player p80 = new ()
+            Player p80 = new()
             {
                 PlayerId = 80,
                 PlayerName = "Zsolt Máté",
@@ -1068,7 +1068,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.250,
                 ClubId = c6.ClubId,
             };
-            Player p81 = new ()
+            Player p81 = new()
             {
                 PlayerId = 81,
                 PlayerName = "Nemanja Antonov",
@@ -1078,7 +1078,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.550,
                 ClubId = c6.ClubId,
             };
-            Player p82 = new ()
+            Player p82 = new()
             {
                 PlayerId = 82,
                 PlayerName = "Branko Pauljevic",
@@ -1088,7 +1088,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.200,
                 ClubId = c6.ClubId,
             };
-            Player p83 = new ()
+            Player p83 = new()
             {
                 PlayerId = 83,
                 PlayerName = "Miroslav Bjelos",
@@ -1098,7 +1098,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.350,
                 ClubId = c6.ClubId,
             };
-            Player p84 = new ()
+            Player p84 = new()
             {
                 PlayerId = 84,
                 PlayerName = "Vincent Onovo",
@@ -1108,7 +1108,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.350,
                 ClubId = c6.ClubId,
             };
-            Player p85 = new ()
+            Player p85 = new()
             {
                 PlayerId = 85,
                 PlayerName = "Nikola Mitrovic",
@@ -1118,7 +1118,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.250,
                 ClubId = c6.ClubId,
             };
-            Player p86 = new ()
+            Player p86 = new()
             {
                 PlayerId = 86,
                 PlayerName = "Barnabás Rázc",
@@ -1128,7 +1128,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.200,
                 ClubId = c6.ClubId,
             };
-            Player p87 = new ()
+            Player p87 = new()
             {
                 PlayerId = 87,
                 PlayerName = "Giorgi Beridze",
@@ -1138,7 +1138,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.400,
                 ClubId = c6.ClubId,
             };
-            Player p88 = new ()
+            Player p88 = new()
             {
                 PlayerId = 88,
                 PlayerName = "Zoltán Stieber",
@@ -1148,7 +1148,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.400,
                 ClubId = c6.ClubId,
             };
-            Player p89 = new ()
+            Player p89 = new()
             {
                 PlayerId = 89,
                 PlayerName = "Krisztián Simon C",
@@ -1158,7 +1158,7 @@ namespace NationalChampionship.Data.Models
                 PlayerValue = 0.400,
                 ClubId = c6.ClubId,
             };
-            Player p90 = new ()
+            Player p90 = new()
             {
                 PlayerId = 90,
                 PlayerName = "Junior Tallo",
