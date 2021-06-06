@@ -19,7 +19,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Api
+namespace NationalChampionship.Api
 {
     public class Startup
     {
@@ -29,8 +29,8 @@ namespace Api
             services.AddControllers();
 
             services.AddTransient<IAdministratorLogic, AdministratorLogic>();
-            services.AddTransient<IAuthLogic, AuthLogic>();
             services.AddTransient<IUserLogic, UserLogic>();
+            services.AddTransient<IAuthLogic, AuthLogic>();
 
             services.AddTransient<IClubRepository, ClubRepository>();
             services.AddTransient<IManagerRepository, ManagerRepository>();

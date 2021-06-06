@@ -3,8 +3,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:7387",
-      "sslPort": 44309
+      "applicationUrl": "http://localhost:57482",
+      "sslPort": 44386
     }
   },
   "profiles": {
@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Api": {
+    "NationalChampionship.Api": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
