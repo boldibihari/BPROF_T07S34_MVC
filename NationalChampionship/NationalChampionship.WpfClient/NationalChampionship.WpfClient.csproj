@@ -7,15 +7,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Background.jpg" />
+    <None Remove="Images\Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\Background.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\NationalChampionship.Data\NationalChampionship.Data.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Player\" />
+    <ProjectReference Include="..\NationalChampionship.Logic\NationalChampionship.Logic.csproj" />
   </ItemGroup>
 
 </Project>

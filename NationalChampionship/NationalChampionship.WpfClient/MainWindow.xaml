@@ -6,19 +6,46 @@
         xmlns:local="clr-namespace:NationalChampionship.WpfClient"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Margin="-110,0,488,0">
+    <Window.Background>
+        <ImageBrush ImageSource="Images/Background.jpg"></ImageBrush>
+    </Window.Background>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="26*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="23*"/>
-            <ColumnDefinition Width="409*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="767*"/>
         </Grid.ColumnDefinitions>
-        <ComboBox x:Name="cbox" HorizontalAlignment="Left" Margin="134,10,0,0" VerticalAlignment="Top" Width="160" Height="39" Grid.Column="1">
-            <ComboBox.ItemTemplate>
+
+        <Menu IsMainMenu="True" Margin="215,0,0,15" Grid.Column="1" Background="DarkOliveGreen" Foreground="White" FontSize="15" HorizontalContentAlignment="Center">
+            <MenuItem Header="Add club" Click="AddClubButtonClick" RenderTransformOrigin="1.79,0.638" Height="54" Width="74">
+            </MenuItem>
+            <MenuItem Header="Add manager" Click="AddManagerButtonClick" VerticalAlignment="Center" HorizontalAlignment="Center" Height="54" Width="110"></MenuItem>
+            <MenuItem Header="Add player" Click="AddPlayerButtonClick" Height="55" Width="99" ></MenuItem>
+            <MenuItem Header="Statistics" Click="StatisticsButtonClick" Height="52" Width="148"></MenuItem>
+            <MenuItem Header="Log out" Click="LogOutButtonClick" Height="56" Width="82">
+                <MenuItem.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="2.726"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.619"/>
+                    </TransformGroup>
+                </MenuItem.RenderTransform>
+            </MenuItem>
+        </Menu>
+
+        <ComboBox x:Name="cbox" HorizontalAlignment="Right" VerticalAlignment="Top" Width="160" Height="39" RenderTransformOrigin="0.481,1.454" Grid.Column="1" Background="OliveDrab" Margin="0,8,568,0">
+            <ComboBox.ItemTemplate >
                 <DataTemplate>
                     <Label Content="{Binding ClubName}" />
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <TextBlock DataContext="{Binding ElementName=cbox, Path=SelectedItem}" Margin="697,95,-450,239" Grid.Column="1">
+
+        <TextBlock DataContext="{Binding ElementName=cbox, Path=SelectedItem}" Margin="495,25,102,234" Grid.Column="1" Grid.Row="1" Foreground="White" Background="OliveDrab" Padding="6, 2, 3, 2">
               <Run Text="{Binding ClubName}"/>
               <LineBreak/>
               <Run Text="{Binding ClubColour}"/>
@@ -29,7 +56,8 @@
               <LineBreak/>
                 <Run Text="{Binding Stadium}"/>
         </TextBlock>
-        <TextBlock DataContext="{Binding ElementName=cbox, Path=SelectedItem.Manager}" Margin="697,260,-450,59" Grid.Column="1">
+
+        <TextBlock DataContext="{Binding ElementName=cbox, Path=SelectedItem.Manager}" Margin="495,182,102,77" Grid.Column="1" Grid.Row="1" Foreground="White" Background="OliveDrab" Padding="6, 2, 3, 2">
               <Run Text="{Binding ManagerName}"/>
               <LineBreak/>
               <Run Text="{Binding ManagerNationality}"/>
@@ -40,10 +68,11 @@
               <LineBreak/>
                 <Run Text="{Binding WonChampionship}"/>
         </TextBlock>
-        <DataGrid x:Name="clubdata" IsReadOnly="True"
-                  Height="323" VerticalAlignment="Top"
-                  AutoGenerateColumns="False" ItemsSource="{Binding ElementName=cbox, Path=SelectedItem.Players}" Margin="134,77,-252,0" Grid.Column="1">
-            <DataGrid.Columns>
+
+        <DataGrid x:Name="players" IsReadOnly="True"
+                  Height="277" VerticalAlignment="Top"
+                  AutoGenerateColumns="False" ItemsSource="{Binding ElementName=cbox, Path=SelectedItem.Players}" Margin="0,7,296,0" Grid.Row="1" Grid.Column="1">
+            <DataGrid.Columns >
                 <DataGridTextColumn Header="Name" Binding="{Binding PlayerName}"/>
                 <DataGridTextColumn Header="Nationality" Binding="{Binding PlayerNationality}" />
                 <DataGridTextColumn Header="Birthdate" Binding="{Binding PlayerBirthDate}" />
@@ -51,12 +80,13 @@
                 <DataGridTextColumn Header="Value" Binding="{Binding PlayerValue}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="LOG OUT" Margin="778,15,-450,371" Click="LogOutButtonClick" Grid.Column="1"/>
-        <Button Content="Add club" Margin="311,15,7,371" Click="AddClubButtonClick" Grid.Column="1"/>
-        <Button Content="Add manager" Margin="411,15,-113,371" Click="AddManagerButtonClick" Grid.Column="1"/>
-        <Button Content="Delete" Margin="718,189,-374,197" Click="DeleteClubButtonClick" Grid.Column="1"/>
-        <Button Content="Update" Margin="789,190,-450,196" Click="UpdateClubButtonClick" Grid.Column="1"/>
-        <Button Content="Delete" Margin="718,349,-374,34" Click="DeleteManagerButtonClick" Grid.Column="1"/>
-        <Button Content="Update" Margin="789,349,-450,34" Click="UpdateManagerButtonClick" Grid.Column="1"/>
+
+        <Button Content="Delete" Margin="670,34,29,286" Click="DeleteClubButtonClick" Grid.Column="1" Grid.Row="1" Background="Olive" Foreground="White" />
+        <Button Content="Update" Margin="670,78,29,243" Click="UpdateClubButtonClick" Grid.Column="1" Grid.Row="1" Background="Olive" Foreground="White" />
+        <Button Content="Delete" Margin="670,190,29,129" Click="DeleteManagerButtonClick" Grid.Column="1" Grid.Row="1" Background="Olive" Foreground="White" />
+        <Button Content="Update" Margin="670,231,29,88" Click="UpdateManagerButtonClick" Grid.Column="1" Grid.Row="1" Background="Olive" Foreground="White" />
+        <Button Content="Delete" Margin="10,304,681,17" Click="DeletePlayerButtonClick" Grid.Column="1" RenderTransformOrigin="-1.659,1.916" Grid.Row="1" Background="Olive" Foreground="White" />
+        <Button Content="Update" Margin="96,304,585,17" Click="UpdatePlayerButtonClick" Grid.Column="1" Grid.Row="1" Background="Olive" Foreground="White" />
+        <Image Source="Images/logo.png" Grid.ColumnSpan="2" Margin="10,-9,742,6" />
     </Grid>
 </Window>
