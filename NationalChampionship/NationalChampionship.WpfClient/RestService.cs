@@ -41,6 +41,18 @@ namespace NationalChampionship.WpfClient
             return items;
         }
 
+        public async Task<T> GetOne<T>()
+        {
+            T item = default(T);
+            HttpResponseMessage response = await
+                client.GetAsync(endpoint);
+            if (response.IsSuccessStatusCode)
+            {
+                item = await response.Content.ReadAsAsync<T>();
+            }
+            return item;
+        }
+
         public async Task<T> Get<T, K>(K id)
         {
             T item = default(T);
